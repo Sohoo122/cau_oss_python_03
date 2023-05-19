@@ -1,7 +1,6 @@
 # %%
 
-# [fill this line]
-
+# 길이를 입력받고 정사각형, 원, 삼각형의 넓이를 반환해주는 파이썬 파일
 import figure
 
 myline = figure.line(10)

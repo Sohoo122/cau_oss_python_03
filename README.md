@@ -5,7 +5,7 @@
 Homework#2, simple calculator 구현
 
 ## 2023-05-02
-Git Diff 시연
+Git Diff 시연 중
 
 ## 2023-05-09
 VSC Extension - Gitlens 실습
