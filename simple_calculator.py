@@ -24,6 +24,7 @@ def arithmetic_ops(op):
 # +와 -는 함수로 정의한다
 def add(x, y) : return x + y
 def sub(x, y) : return x - y
+def check(x, y) : return 
 
 while True:
     op = input("input operation : ")
