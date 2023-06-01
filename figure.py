@@ -9,26 +9,32 @@ import math
 
 class line :
     """
-    class은 line은 선의 길이에 대해 저장하고 있으며, 
-    변수로는 외부에서 접근할 수 없는 __length가 있습니다.
+    class인 line은 선의 길이에 대해 저장하고 있으며, 
+    변수로는 외부에서 접근할 수 없는 __width와 __height가 있습니다.
     변수 수정/접근을 위해 set_length와 get_length가 존재합니다.
     """
-    __length = 0
+    __width = 0
+    __height = 0
     
-    def __init__(self, length) : # 초기 length 값을 받습니다.
-        self.__length = length
+    def __init__(self, width, height) : # 초기 width와 height 값을 받습니다.
+        self.__width = width # 초기 선의 가로 길이
+        self.__height = height # 초기 선의 세로 길이
 
-    def set_length(self, length) : # 선의 길이를 수정합니다.
-        self.__length = length
+    def set_length(self, width, height) : # 선의 길이를 수정합니다.
+        self.__width = width # 수정하고자 하는 가로 길이
+        self.__height = height # 수정하고자 하는 세로 길이
     
     def get_length(self) : # 선의 길이를 반환합니다.
-        return self.__length
+        return self.__width, self.__height
 
-def area_square(length) : # 정사각형의 넓이를 반환합니다.
-    return length * length
+def area_rectangle(width, height) : # 직사각형의 넓이를 반환합니다.
+    if width <= 0 or height <= 0 : raise ValueError
+    return width * height
 
-def area_circle(length) : # 원의 넓이를 반환합니다.
-    return length * length * math.pi
+def area_ellipse(width, height) : # 원의 넓이를 반환합니다.
+    if width <= 0 or height <= 0 : raise ValueError
+    return width * height * math.pi
 
-def area_regular_triangle(length) : # 정삼각형의 넓이를 반환합니다.
-    return math.sqrt(3) / 4 * (length * length)
+def area_right_triangle(width, height) : # 정삼각형의 넓이를 반환합니다.
+    if width <= 0 or height <= 0 : raise ValueError
+    return width * height / 2
